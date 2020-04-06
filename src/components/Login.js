@@ -1,12 +1,12 @@
 
 import React, {Component} from 'react';
 import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
-
-import Actions from 'react-native-router-flux';
+import {Actions} from 'react-native-router-flux';
 
 export default class Login extends React.Component {
 
     onpresslogin() {
+        console.log("Clicked")
         Actions.dashboard();
     }
     
@@ -20,7 +20,7 @@ export default class Login extends React.Component {
                     placeholder="password">Password</TextInput>
                 <Button 
                     title="Login"
-                    onpress={this.onpresslogin}
+                    onPress={this.onpresslogin}
                     color="#841584"
                 />
             </View>
