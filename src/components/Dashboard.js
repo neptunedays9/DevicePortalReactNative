@@ -26,7 +26,7 @@ export default class Dashboard extends React.Component {
         <View style={{ flex: 1, margin: 5, backgroundColor: '#ddd', height: 130}}>
              <FlatList
                 data={DATA}
-                renderItem={({ item }) => <DeviceTile props={item}/>}
+                renderItem={({ item }) => <DeviceTile {...item} />}
                 keyExtractor={item => item.id}
                 numColumns={1}
             />

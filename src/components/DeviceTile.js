@@ -12,7 +12,7 @@ export default class DeviceTile extends React.Component {
 
     render() {
         return(
-            <Button title={"test"}/>
+            <Button title={this.props.title}/>
         );
     }
 }
