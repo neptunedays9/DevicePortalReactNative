@@ -1,7 +1,8 @@
 
 import * as React from 'react';
-import { FlatList, StyleSheet, Text, View, Button } from 'react-native';
-import DeviceTile from './DeviceTile'
+import { FlatList, StyleSheet, Text, View } from 'react-native';
+
+import Product from './Product'
 
 const DATA = [
     {
@@ -26,7 +27,7 @@ export default class Dashboard extends React.Component {
         <View style={{ flex: 1, margin: 5, backgroundColor: '#ddd', height: 130}}>
              <FlatList
                 data={DATA}
-                renderItem={({ item }) => <DeviceTile {...item} />}
+                renderItem={({ item }) => <Product {...item} />}
                 keyExtractor={item => item.id}
                 numColumns={1}
             />
