@@ -1,17 +1,18 @@
 
 import React, {Component} from 'react';
 import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
-import {Actions} from 'react-native-router-flux';
 
-export default class Login extends React.Component {
+import { useNavigation } from '@react-navigation/native';
 
-    onpresslogin() {
-        console.log("Clicked")
-        Actions.dashboard();
+class Login extends React.Component {
+
+    constructor(props) {
+        super(props)
     }
     
     render() {
         return (
+            
             <View>
                 <Text> Login to portal -- </Text>
                 <TextInput>UserName</TextInput>
@@ -20,13 +21,18 @@ export default class Login extends React.Component {
                     placeholder="password">Password</TextInput>
                 <Button 
                     title="Login"
-                    onPress={this.onpresslogin}
+                    onPress={() => this.props.navigation.navigate('DashboardScreen')}
                     color="#841584"
                 />
             </View>
         );
     }
 }
+
+Login.navigationOptions = {
+    title: 'Login',
+    gesturesEnabled: false,
+  };
 
 const styles = StyleSheet.create({
    container: {
@@ -35,3 +41,5 @@ const styles = StyleSheet.create({
        alignItems: 'center'
    } 
 });
+
+export default Login;

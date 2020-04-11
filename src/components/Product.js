@@ -17,7 +17,7 @@ export default class Product extends React.Component {
     render() {
         return(
             <Card>
-                <Image source={images.iphone} style= {{height: 200, width: null, flex: 1}}/>
+                <Image source={images.iphone} style= {{height: 350, width: null, flex: 1}}/>
                 <Text style={{marginBottom: 10, marginTop: 20 }} h2>
                     iPhone 7
                 </Text>

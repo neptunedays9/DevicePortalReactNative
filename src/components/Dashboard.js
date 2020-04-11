@@ -1,6 +1,7 @@
 
-import * as React from 'react';
+import React, {Component} from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
+import {Header} from 'react-native-elements';
 
 import Product from './Product'
 
@@ -21,16 +22,19 @@ const DATA = [
   
 export default class Dashboard extends React.Component {
 
+  constructor(props) {
+    super(props)
+  }
 
     render() {
         return (
         <View style={{ flex: 1, margin: 5, backgroundColor: '#ddd', height: 130}}>
-             <FlatList
-                data={DATA}
-                renderItem={({ item }) => <Product {...item} />}
-                keyExtractor={item => item.id}
-                numColumns={1}
-            />
+          <FlatList
+            data={DATA}
+            renderItem={({ item }) => <Product {...item} />}
+            keyExtractor={item => item.id}
+            numColumns={1}
+          />
         </View>
         );
     }
