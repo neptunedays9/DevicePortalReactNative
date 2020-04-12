@@ -12,11 +12,11 @@ export default class AddItemScreen extends React.Component {
       render() {
           return (
           <View style={{ flex: 1, margin: 5, backgroundColor: '#ddd', height: 130}}>
-          <TextInput>ID</TextInput>
+          <TextInput placeholder="id">ID</TextInput>
 
           <TextInput 
                     placeholderTextColor="gray"
-                    placeholder="password">Description</TextInput>
+                    placeholder="description">Description</TextInput>
                 <Button 
                     title="Submit"
                     onPress={() => this.props.navigation.navigate('DashboardScreen')}
