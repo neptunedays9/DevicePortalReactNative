@@ -8,7 +8,7 @@ Concept :
 
 Device list display:
 
-![picture](images/DeviceApp-ItemList.png)
+![picture](src/images/DeviceApp-ItemList.png)
 
 
 Install 
